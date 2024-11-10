@@ -38,40 +38,4 @@ public class WeatherDataTracker {
             System.out.printf("Highest Temperature: %.2fC\n\n", highestTemperature);
         }
     }
-}public class WeatherDataTracker {
-    public static void main(String[] args) {
-        
-        double[][] temperatures = {
-            {30.5, 32.0, 29.8, 31.2, 30.0, 28.5, 27.3},  // City 1
-            
-            {22.0, 24.5, 23.1, 25.0, 22.2, 21.5, 20.8},  // City 2
-            
-            {15.3, 16.8, 17.2, 15.0, 14.0, 13.8, 14.5}   // City 3 
-        };
-        
-        //  names of the cities
-        String[] cities = {"Baguio", "Manila", "Cebu"};
-
-        for (int i = 0; i < temperatures.length; i++) {
-            // Calculate the average temperature for the current city
-            double totalTemperature = 0.0;
-            double highestTemperature = temperatures[i][0]; 
-
-            for (int j = 0; j < temperatures[i].length; j++) {
-                totalTemperature  += temperatures[i][j];
-        
-                if (temperatures[i][j] > highestTemperature) {
-                    highestTemperature = temperatures[i][j];
-                }
-            }
-
-            // Calculate the average temperature
-            double averageTemperature = totalTemperature / temperatures[i].length;
-
-            // Print out the results
-            System.out.printf("City: %s\n", cities[i]);
-            System.out.printf("Average Temperature: %.2fC\n", averageTemperature);
-            System.out.printf("Highest Temperature: %.2fC\n\n", highestTemperature);
-        }
-    }
 }
